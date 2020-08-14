@@ -1,2 +1,2 @@
-# js_sandbox
+# JS Sandbox
  Files to Learn Javascript
