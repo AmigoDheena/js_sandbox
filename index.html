@@ -42,7 +42,86 @@
     // animals.pop();
     console.log(animals);
 
+    // objects
+    const Person_obj = {
+        person_name: 'Dheena',
+        person_age: '27',
+        person_hobbies:['Movies', 'Gaming', 'Riding'],
+        person_address:{
+            street: 'Kammalar Street',
+            city: 'vpm',
+            state: 'TN'
+        }
+    }
+    console.log(Person_obj);
+    // console.log(Person_obj.hobbies[2]);
+    // console.log(Person_obj.address.street);
 
+    const {person_name, person_age, person_hobbies} = Person_obj; // pulling data from object
+    console.log(person_hobbies[1]);
 
+    Person_obj.person_email = 'amigodheena@gmail.com'; //insert data to object
+    console.log(Person_obj);
+
+    const todo = [
+        {
+        id: 1,
+        program: "Client call",
+        isCompleted: false
+        },
+        {
+        id: 2,
+        program: "Office Meeting",
+        isCompleted: false
+        },
+        {
+        id: 3,
+        program: "Birthday Function",
+        isCompleted: true
+        }
+    ];
+    
+    console.log(todo);
+
+    const todoJSON = JSON.stringify(todo);
+    console.log(todoJSON);
+
+    //Method1
+    for (let i = 0; i < todo.length; i++) {
+        const element = todo[i].program;
+        console.log(element);        
+    }
+
+    //Method2
+    for(let todos of todo){
+        console.log(todos.program);
+    }
+
+    //foreach, map , filter
+
+    //foreach        
+        //normal function
+        todo.forEach(function(todos){
+            console.log(todos.id);
+        });
+
+        //arrow function
+        todo.forEach(todos => {
+            console.log(todos.id);
+        });
+
+    //map
+    const todomap = todo.map(todos=>{
+        return todos.program;
+    });
+    console.log(todomap);
+
+    //filter
+    const todofilter = todo.filter(todos=>{
+        return todos.isCompleted === true;
+    }).map(todos=>{
+        return todos.program;
+    });
+    console.log(todofilter);
 </script>
 </html>
