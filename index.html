@@ -123,5 +123,31 @@
         return todos.program;
     });
     console.log(todofilter);
+
+    // Conditional
+    let x = 10;
+    if(x ==10){
+        console.log('x ix equal to 10');
+    }else if(x > 10){
+        console.log('x is grater than 10');
+    }else{
+        console.log('x is less than 10');
+    }
+
+    // Ternary Operator
+    const Ternary = x > 10 ? 'case1' : 'case2';
+    // console.log(Ternary);
+
+    switch(Ternary){
+        case 'case1':
+            console.log('x is grater than 10');    
+            break;
+        case 'case2':
+            console.log('x is not grater than 10');
+            break
+        default:
+            console.log('x is not grater or less than 10');
+        break;
+    }
 </script>
 </html>
