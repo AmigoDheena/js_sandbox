@@ -69,7 +69,7 @@ const todo = [
     isCompleted: true
     }
 ];
-
+// document.querySelector('.userlist').innerHTML = todo[1].program;
 console.log(todo);
 
 const todoJSON = JSON.stringify(todo);
@@ -79,6 +79,7 @@ console.log(todoJSON);
 for (let i = 0; i < todo.length; i++) {
     const element = todo[i].program;
     console.log(element);        
+    document.querySelector('.userlist').innerHTML = element;
 }
 
 //Method2
@@ -239,6 +240,7 @@ function onSubmit(e){
         namefield.value = '';
         emailfield.value = '';
     }
+
 }
 
 // Basics over
